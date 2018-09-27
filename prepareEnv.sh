@@ -16,6 +16,8 @@ usermod -aG docker composer
 
 setfacl -m user:composer:rw /var/run/docker.sock
 
+cd /etc/sudoers.d/
+touch user-composer
 echo 'composer ALL=(ALL) NOPASSWD:ALL' > user-composer
 
 #Install nvm and nodejs
