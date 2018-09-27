@@ -21,6 +21,7 @@ echo 'composer ALL=(ALL) NOPASSWD:ALL' > user-composer
 #Install nvm and nodejs
 su composer
 
+cd ~
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
 
 source ~/.bashrc
