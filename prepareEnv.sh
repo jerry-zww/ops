@@ -31,3 +31,9 @@ source ~/.bashrc
 nvm install v8.11.4
 
 nvm alias default v8.11.4
+
+#composer
+npm install -g grpc@1.10.1
+npm install -g composer-cli@0.19.13
+npm install -g composer-playground@0.19.13
+npm install -g composer-rest-server@0.19.13
