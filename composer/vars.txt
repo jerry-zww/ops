@@ -1,0 +1,30 @@
+COMPOSER_CARD=admin@prescription-network
+COMPOSER_NAMESPACES=never
+COMPOSER_AUTHENTICATION=true
+COMPOSER_MULTIUSER=true
+COMPOSER_PROVIDERS='{"openid": {
+        "provider": "openid",
+        "module": "passport-openidconnect",
+        "issuer": "http://<ip>:8080/auth/realms/emr",
+        "session": "true",
+        "clientID": "<client-id>", 
+        "clientSecret": "<client-secret>", 
+        "callbackURL": "/auth/openid/callback", 
+        "authorizationURL": "http://<ip>:8080/auth/realms/emr/protocol/openid-connect/auth", 
+        "tokenURL": "http://<ip>:8080/auth/realms/emr/protocol/openid-connect/token", 
+        "userInfoURL": "http://<ip>:8080/auth/realms/emr/protocol/openid-connect/userinfo", 
+        "scope": "openid email profile",
+        "authPath": "/auth/openid",
+        "callbackPath": "/auth/openid/callback",
+        "successRedirect": "http://<ip>:3000/explorer/",
+        "failureRedirect": "/",
+        "failureFlash": true
+     }
+}'
+COMPOSER_DATASOURCES='{
+    "db": {
+        "name": "db",
+        "connector": "mongodb",
+        "host": "mongo"
+    }
+}'
